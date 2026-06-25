@@ -29,8 +29,8 @@ function createLap() {
   let thisLap = currentTime - lastLap; // calculates time taken from last recorded lap to present recorded one.
   
   // Conversion from milliseconds to normal time units.
-  let seconds = Math.floor(thisLap / 1000)%60;
-  let minutes = Math.floor(thisLap / 60000)%60;
+  let seconds = Math.floor((thisLap / 1000) %60);
+  let minutes = Math.floor((thisLap / 60000)%60);
   let hours = Math.floor(thisLap / 3600000);
   
   seconds = String(seconds).padStart(2, "0")
