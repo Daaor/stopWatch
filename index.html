@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>Stop Watch</title>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center">
+  <div class="flex flex-col gap-10 border-2 border-gray-300 p-10 rounded-xl shadow-lg shadow-gray-200 text-center"> <!--Main Container-->
+    
+    <div> <!--Display-->
+      <span id="myDisplay" class="text-[50px] md:text-[100px]">00 : 00 : 00</span>
+    </div>
+
+    <div class="flex gap-10 justify-center"> <!--Buttons-->
+      <button id="startBtn" onclick="startTimer()" class="bg-gray-500 border-none rounded-full px-5 py-3 text-white hover:bg-gray-600 hover:shadow-lg hover:-translate-y-1 transition delay-100 duration-300 ease-in">Start</button>
+      <button id="lapBtn" onclick="createLap()" class="bg-gray-500 border-none rounded-full px-5 py-3 text-white hover:bg-gray-600 hover:-translate-y-1 transition delay-100 duration-300 ease-in-out">Lap</button>
+      <button id="lapBtn" onclick="endTimer()" class="bg-gray-500 border-none rounded-full px-5 py-3 text-white hover:bg-gray-600 hover:-translate-y-1 transition delay-100 duration-300 ease-in-out">Reset</button>
+    </div>
+
+  </div>
+
+  <div id="lapValues" class="flex flex-col gap-5 "></div> <!--Lap Display-->
+
+  <script src="./src/main.js"></script>
+</body>
+</html>
